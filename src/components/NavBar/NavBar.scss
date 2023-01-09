@@ -1,0 +1,79 @@
+$highlight: #d87d4a;
+
+.nav {
+  &-container {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-template-rows: 8vh auto;
+    min-height: 8vh;
+    background-color: black;
+  }
+  &-brandContainer {
+    width: 110px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: center;
+    & img {
+      width: 110px;
+    }
+  }
+  &-toggle {
+    grid-column-start: 1;
+    justify-self: start;
+
+    &:focus {
+      box-shadow: none;
+    }
+    &:focus-visible {
+      border: none;
+    }
+  }
+  &-icon {
+    font-size: 1.8rem;
+    fill: white;
+    stroke: white;
+    stroke-width: 0.6;
+  }
+}
+
+.navbar {
+  &-collapse {
+    width: inherit;
+    grid-column: 1 / span 3;
+    grid-row-start: 2;
+    margin: 0 auto;
+  }
+  &-nav {
+    margin: 0 auto;
+  }
+}
+
+.iconCart-container {
+  grid-column-start: 3;
+  justify-self: end;
+}
+
+//////////////////////////////
+// MEDIA QUERIES 992
+//////////////////////////////
+
+@media screen and (min-width: 992px) {
+  .nav {
+    &-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &-brandContainer {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      justify-self: start;
+    }
+  }
+
+  .navbar {
+    &-collapse {
+      width: auto;
+      grid-column: 2 / span 1;
+      grid-row-start: 1;
+    }
+  }
+}

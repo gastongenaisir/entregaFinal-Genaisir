@@ -1,0 +1,14 @@
+.count {
+  &-container {
+    display: flex;
+    width: 100%;
+  }
+
+  &-cart-btn {
+    height: 38px !important;
+    min-width: 140px !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 0.8125rem !important;
+  }
+}
